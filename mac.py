@@ -34,7 +34,7 @@ def mainwork(interface,new_mac): # changing the mac asddress
     return True
     pass
 
-def checkChainged(interface,new_mac):
+def checkChainged(interface,new_mac): # Going through Regex to see if your mac changed
     print(Fore.GREEN+"Checking if the mac address did change")
     output = subprocess.check_output(["sudo" ,"ifconfig",interface])
     regresult = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w",output.decode('utf-8'))
